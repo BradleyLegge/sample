@@ -5,8 +5,8 @@ import Shop from "./Shop";
 const Item = () => {
   return (
     <div className="hero">
-      {data.map((i, index) => (
-        <Shop key={index} i={i} />
+      {data.map((i) => (
+        <Shop key={i.id} i={i} />
       ))}
     </div>
   );

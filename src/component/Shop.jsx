@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import { useCartStore } from "../store/cartStore";
 
 const Shop = ({ i }) => {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = () => {
-    setCart((prev) => [...prev, i]);
-    console.log(cart);
-    console.log(cart.length);
-  };
+  const addToCart = useCartStore((state) => state.addToCart());
 
   return (
     <div className="container">
